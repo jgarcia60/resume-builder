@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
+    </head>
+    <body>
+        <main class="formContainer">
+            <section id="resumeName">
+                <form>
+                    <label><h2>Resume Name</h2></label>
+                    <input type="text" id="resumeName" name="resumeName">
+                </form>
+            </section>
+            <section class="objective">
+                <form id="objectiveForm">
+                    <label><h4>Objective Statement</h4></label>
+                    <input type="text" id="objectiveText" name="objectiveText"><br><br>
+                </form>
+            </section>
+            <section class="education">
+                <form id="educationForm">
+                    <label><h4>Education</h4></label>
+                    <label class="educationEntries">School</label>
+                    <input type="text" class="school" name="school"><br>
+
+                    <label class="educationEntries">Degree</label>
+                    <input type="text" class="degree" name="degree"><br>
+
+                    <label class="educationEntries">Start Date</label>
+                    <input type="text" class="startDate" name="startDate">
+                    <label class="educationEntries">End Date</label>
+                    <input type="text" class="endDate" name="endDate"><br>
+
+                    <label class="educationEntries">Program</label>
+                    <input type="text" class="program" name="program"><br>
+
+                </form>
+            </section>
+            <button type="button" id="addEducation">Add Education</button>
+            <section class="experience">
+                <form id="experienceForm">
+                    <label><h4>Experience</h4></label>
+                    <label class="experienceEntries">Employer</label>
+                    <input type="text" class="employer" name="employer"><br>
+
+                    <label class="experienceEntries">Job Title</label>
+                    <input type="text" class="title" name="title"><br>
+
+                    <label class="experienceEntries">Start Date</label>
+                    <input type="text" class="startDate" name="endDate">
+                    <label class="experienceEntries">End Date</label>
+                    <input type="text" class="endDate" name="endDate"><br>
+
+                    <label class="experienceEntries">Description</label>
+                    <textarea type="text" class="description" name="description" rows="10" cols="60">List your major contributions and responsibilities</textarea><br>
+                </form>
+                
+            </section>
+            <button type="button" id="addExperience">Add Experience</button>
+            <section class="projects">
+                <form id="projectForm">
+                    <label><h4>Projects</h4></label>
+                    <label class="projectEntries">Project Title</label>
+                    <input type="text" class="projectTitle" name="projectTitle"><br>
+
+                    <label>Project Description</label>
+                    <textarea type="text" class="projectDescription" name="projectDescription" rows="10" cols="60">Describe what you accomplished in this project</textarea><br>
+                </form>
+            </section>
+            <section class="skills">
+                <form id="skillsform">
+                    <label><h4>Skills</h4></label>
+                    <textarea type="text" class="skills" name="skills" rows="10" cols="60">List your relevant skills</textarea>
+                </form>
+            </section>
+            <section class="awards">
+                <form id="awardsForm">
+                    <label><h4>Awards</h4></label>
+                    <textarea type="text" class="awards" name="awards" rows="10" cols="60">List your relevant awards</textarea>
+                </form>
+            </section>
+            <button type="button" id="addProject">Add Another Project</button><br>
+            <button type="button" id="saveButton">Save Resume</button>
+            <div class="field is-grouped is-grouped-right">
+                <p class="control">
+                  <a class="button is-primary">
+                    Save Resume
+                  </a>
+                </p>
+                <p class="control">
+                  <a class="button is-light">
+                    Cancel
+                  </a>
+                </p>
+              </div>
+        </main>
+        <script src="" async defer></script>
+    </body>
+</html>
