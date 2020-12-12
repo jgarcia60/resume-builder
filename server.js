@@ -23,6 +23,15 @@ app.set("view engine", "handlebars");
 
 //add Views routes  
 
+//test route to test basic index.handlebars route without data
+// app.get("/", (req,res)=>{
+//     db.User.findAll({}).then((result)=>{
+//         res.render("index",result)
+//     }).catch((error)=>{
+//         console.log(error)
+//     })
+// })
+
 //add API routes
 
 //uncomment this when sequelize is set up
