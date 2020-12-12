@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS resumes_db;
+CREATE DATABASE resumes_db;
