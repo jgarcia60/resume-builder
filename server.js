@@ -22,6 +22,8 @@ app.set("view engine", "handlebars");
 //ROUTES
 
 //add Views routes  
+var routes = require("./routes/view-routes.js");
+app.use(routes);
 
 //add API routes
 
@@ -32,8 +34,9 @@ db.sequelize.sync().then(() => {
     })
 })
 
-const seed = require('./seeds');
-function runSeed() {
-    seed.addUser();
-}
-runSeed();
+// const seed = require('./seeds');
+// function runSeed() {
+//     seed.addUser();
+//     seed.addResume();
+// }
+// runSeed();
