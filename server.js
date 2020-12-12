@@ -11,8 +11,6 @@ const db = require('./models');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -27,10 +25,15 @@ app.set("view engine", "handlebars");
 
 //add API routes
 
-/* //uncomment this when sequelize is set up
+//uncomment this when sequelize is set up
 db.sequelize.sync().then(() => {
     app.listen(PORT, () => {
         console.log(`App is running on http://localhost:${PORT}`);
     })
 })
-*/
+
+const seed = require('./seeds');
+function runSeed() {
+    seed.addUser();
+}
+runSeed();
