@@ -5,9 +5,14 @@ let seed = {
     addUser: function() {
         db.User.create({
             userName: "jgarcia",
-            userPassword: "Mickey19",
+            password: "Mickey19",
             email: "jgarcia@gmail.com",
             phone: 99999999,
+        })
+    },
+    addResume: function(){
+        db.Resume.create({
+            resumeName: "test"
         })
     }
     

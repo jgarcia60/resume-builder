@@ -44,5 +44,6 @@ db.sequelize.sync().then(() => {
 const seed = require('./seeds');
 function runSeed() {
     seed.addUser();
+    seed.addResume();
 }
 runSeed();
