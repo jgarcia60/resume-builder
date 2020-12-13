@@ -22,6 +22,7 @@ app.set("view engine", "handlebars");
 //ROUTES
 
 //add Views routes  
+require("./routes/api-routes.js")(app);
 var routes = require("./routes/view-routes.js");
 app.use(routes);
 
