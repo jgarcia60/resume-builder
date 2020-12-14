@@ -13,7 +13,8 @@ $(document).ready(function(){
             }
         })
         .then(function(){
-            console.log("data sent!")
+            console.log("data sent!");
+            window.location.replace("/index");
         })
         .catch(err =>{
             console.log(err);
