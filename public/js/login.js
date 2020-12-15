@@ -4,6 +4,7 @@ $(document).ready(function(){
         let userEmail = $(".userEmail").val();
         let userPwd = $(".userPassword").val();
         
+        //verify the user 
         $.ajax({
             method: "POST",
             url: "/api/login",
@@ -11,13 +12,22 @@ $(document).ready(function(){
                 email: userEmail,
                 password: userPwd
             }
-        })
-        .then(function(){
+        }).then(function(){
             console.log("data sent!");
-            window.location.replace("/index");
-        })
-        .catch(err =>{
+        }).catch(err =>{
             console.log(err);
         })
+        
+        //get resumes for this user
+        $.ajax({
+            method: "GET",
+            url: "/api/login/" + userEmail
+        }).then(function(){
+            console.log("bring user data")
+            window.location.replace("/index");
+        }).catch(err=>{
+            console.log(err);
+        })
+
     })
 })
