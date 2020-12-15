@@ -1,6 +1,9 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const handlebars = require('handlebars');
+const puppeteer = require('puppeteer');
+const fs = require('fs');
+
 
 const {
     allowInsecurePrototypeAccess,
@@ -22,6 +25,7 @@ app.set("view engine", "handlebars");
 //ROUTES
 
 //add Views routes  
+require("./routes/api-routes.js")(app);
 var routes = require("./routes/view-routes.js");
 app.use(routes);
 

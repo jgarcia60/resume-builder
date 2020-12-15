@@ -5,19 +5,86 @@
     <meta charset="utf-8">
     <title>My Resumes</title>
 </head>
+<section class="hero is-info is-large">
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <img src="https://png.pngtree.com/png-vector/20190725/ourlarge/pngtree-vector-resume-icon-png-image_1591180.jpg" alt="Logo">
+          </a>
+          <span class="navbar-burger" data-target="navbarMenuHeroB">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroB" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item is-active">
+              Home
+            </a>
+            <a class="navbar-item" href="/newResume">
+              New Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
 
-<div class = "section">
-    <div class = "container">
-        <h1>Welcome to Resume Builder</h1>
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <p class="title">
+        Resume Builder
+      </p>
+      <p class="subtitle">
+        Welcome "Users Name"
+      </p>
     </div>
+  </div>
 
-    <div class="columns">
-        <div class="column">
-            {{#each users}}
-            {{/each}}
+  <div class="hero-foot">
+    <nav class="tabs is-boxed is-fullwidth">
+      <div class="container">
+        <ul>
+          <li class="is-active">
+            <a>Resumes</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Users Name</h1>
+            <div class="level-right">
+                <p class="level-item"><a class="button is-link is-light" href="/newResume">New Resume</a></p>
+            </div>
+            <h2 class="subtitle">
+                resume's will go here
+        </div>
+    </section>
+    <div class="container">
+        <div class="tile is-ancestor">
+            <div class="tile is-vertical is-3 has-text-centered">
+                <div class="tile">
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification is-info">
+                            <p class="title">resume name</p>
+                            <figure class="image is-4by3">
+                                <img
+                                    src="https://png.pngtree.com/png-clipart/20200709/original/pngtree-elegant-minimalistic-modern-vector-resume-or-cv-template-designed-on-a4-png-image_3528067.jpg">
+                            </figure>
+                        </article>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-</div>
+</body>
 
 </html>
