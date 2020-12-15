@@ -45,8 +45,8 @@ $(document).ready(function() {
         const experienceCounter = JSON.parse(localStorage.getItem("experienceCounter"));
         const projectCounter = JSON.parse(localStorage.getItem("projectCounter"));
     
-        const resumeName = $("#resumeName").val().trim();
-        const objective = $("#objective").val();
+        const resumeFileName = $("#resumeName").val().trim();
+        const objectiveStatement = $("#objective").val();
         const skills= $("#skills").val();
         const awards = $("#awards").val();
         if (resumeName == "") {
@@ -56,6 +56,11 @@ $(document).ready(function() {
         // console.log("Objective: " + objective);
         // console.log("Skills: " + skills);
         // console.log("Awards: " + awards);
+        
+    //define Resume object for resume post route call
+     
+        
+        let educationArray = [];
         for (let i = 0; i <= educationCounter; i++) {
             if (i == 0 && $(".school").eq(i).val() == "") {
                 break;
@@ -68,9 +73,10 @@ $(document).ready(function() {
                 program: $(".program").eq(i).val()
             };
             console.log(education);
+            educationArray.push(education);
             //Call post route for EDUCATION OBJECT
         }
-        
+        let experienceArray = [];
         for (let i = 0; i <= experienceCounter; i++) {
             if (i == 0 && $(".employer").eq(i).val() == "") {
                 break;
@@ -83,9 +89,10 @@ $(document).ready(function() {
                 description: $(".description").eq(i).val(),
             };
             console.log(experience);
+            experienceArray.push(experience);
             //Call post route for EXPERIENCE OBJECT
         }
-        
+        let projectArray = [];
         for (let i = 0; i <= projectCounter; i++) {
             if (i == 0 && $(".projectTitle").eq(i).val() == "") {
                 break;
@@ -95,20 +102,27 @@ $(document).ready(function() {
                 description: $(".projectDescription").eq(i).val(),
             };
             console.log(project);
+            projectArray.push(project);
             //Call post route for PROJECT OBJECT
         }
         
-     //define Resume object for resume post route call
-     
-        // const resume = {
-        //     resumeName: resumeName,
-        //     objective: objective
-        // }
-        // $.ajax("/api/resumes", {
-        //     type: "POST",
-        //     data: resume
-        // }).then(function() {
-        //     console.log("posted resume to DB");
-        // });
+        const resume = 
+        {
+            resumeName: resumeFileName,
+            objective: objectiveStatement,
+            //later include skills and awards
+            educations: educationArray,
+            experiences: experienceArray,
+            projects: projectArray,
+        };
+        
+        $.ajax({
+            method: "POST",
+            url: "/api/resumes",
+            data: resume
+        }).then(function(res) {
+            console.log("posted resume");
+            res.send(res);
+        });
     });
 });
