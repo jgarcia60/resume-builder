@@ -1,7 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "13285TbK",
+
+
+    "password": "camcam24",
     "database": "resumes_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
