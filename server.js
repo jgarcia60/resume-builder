@@ -38,5 +38,9 @@ db.sequelize.sync().then(() => {
 // function runSeed() {
 //     seed.addUser();
 //     seed.addResume();
+//     seed.addEducation();
+//     seed.addExperience();
+//     seed.addProject();
+
 // }
 // runSeed();
