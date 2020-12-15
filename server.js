@@ -1,6 +1,9 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const handlebars = require('handlebars');
+const puppeteer = require('puppeteer');
+const fs = require('fs');
+
 
 const {
     allowInsecurePrototypeAccess,
@@ -39,5 +42,9 @@ db.sequelize.sync().then(() => {
 // function runSeed() {
 //     seed.addUser();
 //     seed.addResume();
+//     seed.addEducation();
+//     seed.addExperience();
+//     seed.addProject();
+
 // }
 // runSeed();

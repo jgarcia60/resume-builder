@@ -12,6 +12,7 @@ let seed = {
     },
     addResume: function(){
         db.Resume.create({
+
             resumeName: "test",
             UserId: 1
         })
