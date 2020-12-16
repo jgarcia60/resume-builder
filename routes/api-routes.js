@@ -11,28 +11,25 @@ module.exports = function(app){
     app.get("/api/login/:user", async function(req,res){
         const loginEmail = req.params.user;
         console.log(loginEmail);
-        const getId = await db.User.findOne({
+        const getUserInfo = await db.User.findOne({
             where:{
                 email: loginEmail
             }
         })
-        const userId = getId.dataValues.id;
-        console.log(userId);
-
-        // }).then(async function(data){
-        //     console.log(data.dataValues);
-        //     const loginId = data.dataValues.id;
-        //     const allResume = await db.Resume.findAll({
-        //         where: {
-        //             userId : loginId
-        //         }
-        //     });
-        //     const allResumeName = allResume.forEach(data =>{
-        //         console.log(data.dataValues.resumeName);
-        //         res.json(data.dataValues.resumeName);
-        //     })
-        //     allResumeName;
-        // })
+        const getUserId = getUserInfo.dataValues.id;
+        const allResume = await db.Resume.findAll({
+            where:{
+                userId: getUserId
+            }
+        }).then(function(data){
+            data.forEach(resume =>{
+                console.log(resume.dataValues.resumeName);
+                res.json(resume.dataValues.resumeName);
+            })
+        }).catch(err =>{
+            console.log(err)
+        })
+        allResume;
     })
     
 }
