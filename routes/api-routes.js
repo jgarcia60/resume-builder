@@ -1,4 +1,5 @@
 var db = require("../models");
+// const router = express.Router();
 
 module.exports = function(app){
     //verify the user (user authentication)
@@ -31,5 +32,14 @@ module.exports = function(app){
         })
         allResume;
     })
+
+    // router.post("/api/:resumes", (req,res) => {
+    //     db.Resume.create(req.body)
+    //     .then((result) => {
+    //         res.json(result);
+    //     }).catch((err) => {
+    //         console.log(err);
+    //     });
+    // })
     
 }

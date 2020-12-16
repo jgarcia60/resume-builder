@@ -19,11 +19,12 @@ module.exports = function(sequelize, DataTypes) {
         }
     });
 
-    User.associate = function (models) {
-        User.hasMany(models.Resume, {
-            onDelete: "cascade"
-        });
-    };
+    // User.associate = function (models) {
+    //     User.hasMany(models.Resume, {
+    //         foreignKey: "userId",
+    //         onDelete: "cascade"
+    //     });
+    // };
 
     return User;
 }
