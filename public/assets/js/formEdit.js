@@ -1,17 +1,14 @@
-// for (let i = 0; i < 4; i++) {
-//     let letter = 'B';
-    // let letter = String.fromCharCode(65+i);
-//     let (isSchool + letter) = "B";
-//     // letter.charCodeAt(i)
-//     // letter += i;
-//     console.log(isSchool);
-// }
-
+//get route for resume ID
+$.ajax({
+    method: "GET",
+    url: "/api/resumeId"
+})
 
 //save as new resume, but maybe for "future development"
 
 //update current
-$("#saveButton").on("click", function() {
+$("#saveNewButton").on("click", function() {
+    const resumeId = $(this).data("id");
     const resumeFileName = $("#resumeName").val().trim();
     const objectiveStatement = $("#objective").val();
     const skills= $("#skills").val();
@@ -92,7 +89,6 @@ $("#saveButton").on("click", function() {
         
 
     const resume = {
-        userId: userId,
         resumeName: resumeFileName,
         objective: objectiveStatement,
 
@@ -152,7 +148,7 @@ $("#saveButton").on("click", function() {
 
     $.ajax({
         method: "PUT",
-        url: 'api/resumes',
+        url: `api/resumes/${resumeId}`,
         data: resume
     }).then(function(res) {
         res.send(res);

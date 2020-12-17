@@ -31,7 +31,17 @@ module.exports = function(app){
             console.log(err)
         })
         allResume;
-    })
+    });
+
+    app.post("/api/newResume", (req, res) => {
+        db.Resume.create(req.body)
+        .then((result) => {
+            res.json(result);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+    });
 
     // router.post("/api/:resumes", (req,res) => {
     //     db.Resume.create(req.body)
@@ -41,5 +51,43 @@ module.exports = function(app){
     //         console.log(err);
     //     });
     // })
+
+    //route to get all resumes for user
+    app.get('/api/:userId', (req, res) => {
+        db.User.findAll({
+            where: {
+                userId: req.params.id
+            }
+        }).then((result) => {
+            return res.json(result);
+        }).catch((err) => {
+            console.log(err);
+        })
+    })
     
+    //route to get specific resume Id
+    app.get('/api/:resumeId', (req, res) => {
+        db.Resume.findOne({
+            where: {
+                id: req.params.id
+            }
+        }).then((result) => {
+            return res.json(result);
+        }).catch((err) => {
+            console.log(err);
+        })
+    })
+
+    //route to update resume
+    app.put('/api/resumes/:id', (req, res) => {
+        db.Resume.update(req.body, {
+            where: {
+                id: req.params.id,
+            }
+        }).then((result) => {
+            res.json(result);
+        }).catch((err) => {
+            console.log(err);
+        })
+    })
 }

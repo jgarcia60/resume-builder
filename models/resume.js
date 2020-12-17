@@ -32,7 +32,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.BOOLEAN,
             defaultValue: false,
         },
-        empoyer: {
+        employer: {
             type: DataTypes.STRING,
 
         },
@@ -168,9 +168,6 @@ module.exports = function(sequelize, DataTypes) {
         awards: {
             type: DataTypes.TEXT,
         }
-        
-        
-        
     })
 
     // Resume.associate = function (models) {
