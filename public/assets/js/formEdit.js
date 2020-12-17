@@ -19,18 +19,18 @@ $("#saveNewButton").on("click", function() {
     };
 
     //may need to do this in the index page and push to local storage
-    const url = Window.location.href;
-        let backwardsUser = '';
-        for (let i = url.length; i >= 0; i--) {
-            if (url.charAt(i) == '/' || url.charAt(i) == '\''){
-                break;
-            }
-            backwardsUser += url.charAt(i);
-        }
-        let userId = '';
-        for(let i = backwardsUser.length; i >= 0; i) {
-            userId += backwardsUser.charAt(i);
-        }
+    // const url = Window.location.href;
+    //     let backwardsUser = '';
+    //     for (let i = url.length; i >= 0; i--) {
+    //         if (url.charAt(i) == '/' || url.charAt(i) == '\''){
+    //             break;
+    //         }
+    //         backwardsUser += url.charAt(i);
+    //     }
+    //     let userId = '';
+    //     for(let i = backwardsUser.length; i >= 0; i) {
+    //         userId += backwardsUser.charAt(i);
+    //     }
         const school = $(".school").val();
        const degree = $(".degree").val();
        const startDate = $(".startDate").val();
@@ -85,7 +85,7 @@ $("#saveNewButton").on("click", function() {
        const summaryC = $("#summaryC").val();
        const isProjectC = $("#projectC").val() === "" || $("#projectC").val() === undefined ? false: true;
 
-    const userId = JSON.parse(localStorage.getItem("userId"));
+    // const userId = JSON.parse(localStorage.getItem("userId"));
         
 
     const resume = {
