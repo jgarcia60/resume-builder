@@ -2,6 +2,10 @@ console.log("hello world");
 
 
 $(document).ready(function() {
+    $("#cancelButton").on("click", function() {
+        window.history.back();
+    })
+
     let educationCounter = 0;
     let experienceCounter = 0;
     let projectCounter = 0;
@@ -153,7 +157,7 @@ $(document).ready(function() {
        const isSchoolC = $("#schoolC").val() === "" || $("#schoolC").val() === undefined ? false: true;
 
        const employer = $(".employer").val();
-       const title = $(".title").val();
+       const title = $(".jobTitle").val();
        const jobStart = $(".jobStart").val();
        const jobEnd = $(".jobEnd").val();
        const description = $(".description").val();

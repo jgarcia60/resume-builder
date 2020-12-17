@@ -5,6 +5,15 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
+        name: {
+            type: DataTypes.STRING,
+        },
+        email: {
+            type: DataTypes.STRING
+        },
+        phoneNumber: {
+            type: DataTypes.STRING
+        },
         resumeName: {
             type: DataTypes.STRING
         },
@@ -169,32 +178,6 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.TEXT,
         }
     })
-
-    // Resume.associate = function (models) {
-    //     Resume.belongsTo(models.User, {
-    //         foreignKey: "userId",
-    //         // targetKey: 'id'
-    //     });
-
-    //     Resume.hasMany(models.Experience, {
-    //         onDelete: "cascade",
-    //         foreignKey: "resumeId",
-    //         // sourceKey: 'userID'
-    //     });
-
-    //     Resume.hasMany(models.Education, {
-    //         onDelete: "cascade",
-    //         foreignKey: "resumeId",
-    //         // sourceKey: 'userID'
-    //     });
-
-    //     Resume.hasMany(models.Project, {
-    //         onDelete: "cascade",
-    //         foreignKey: "fk_resumeid",
-    //         // sourceKey: 'userId'
-    //     });
-
-    // }
 
     return Resume;
 }

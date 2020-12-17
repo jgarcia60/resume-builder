@@ -22,6 +22,26 @@
                         </div>
                     </form>
                 </section>
+                <div class="field is-horizontal columns">
+                    <div class="column">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input type="text" class="name" size="25" value="{{name}}">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input type="text" class="email"size="25" value="{{email}}"><br>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <label class="label">Phone Number</label>
+                        <div class="control">
+                            <input type="text" class="phoneNumber" size="25" value="{{phoneNumber}}"><br>
+                        </div>
+                    </div>
+                </div>
                 <section class="objectiveContainer">
                     <form id="objectiveForm">
                         <label class="label">Objective Statement</label>
@@ -129,7 +149,7 @@
                     </form>
                 </section>
                 {{/if}}
-                <button type="button" id="addEducation">Add Education</button><br><br>
+                <!-- <button type="button" id="addEducation">Add Education</button><br><br> -->
                 {{#if isEmployer}}
                 <section class="experience" data-index="1">
                     <form id="experienceForm">
@@ -141,7 +161,7 @@
 
                         <label class="experienceEntries">Job Title</label>
                         <div class="control">
-                            <input type="text" class="title" id="jobTitle" size="40" value="{{titleA}}"><br>
+                            <input type="text" class="jobTitle" id="jobTitle" size="40" value="{{titleA}}"><br>
                         </div>
                         <div class="field is-horizontal columns">
                             <div class="column">
@@ -291,18 +311,18 @@
                 
                 <!-- <button type="button" id="saveButton">Save Resume</button> -->
                 <div class="field is-grouped is-grouped-right">
-                    <p class="control">
+                    {{!-- <p class="control">
                         <a class="button is-primary" id="saveNewButton">
                             Save as New Resume
                         </a>
-                    </p>
+                    </p> --}}
                     <p>
                         <a class="button is-primary" data-id="{{id}}" id="updateButton">
                             Update Current
                         </a>
                     </p>
                     <p class="control">
-                        <a class="button is-light">
+                        <a class="button is-light" id="cancel">
                             Cancel
                         </a>
                     </p>
