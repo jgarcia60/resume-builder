@@ -12,38 +12,15 @@ module.exports = function(app){
         if (!req.user) {
           res.json({});
         } else {
+            console.log(req.user);
             res.json({
+            userName: req.user.userName,
             email: req.user.email,
             id: req.user.id
           });
         }
       });
         
-
-    //Get resumes for logged in user
-    app.get("/api/login/:user", async function(req,res){
-        const loginEmail = req.params.user;
-        console.log(loginEmail);
-        const getUserInfo = await db.User.findOne({
-            where:{
-                email: loginEmail
-            }
-        })
-        const getUserId = getUserInfo.dataValues.id;
-        const allResume = await db.Resume.findAll({
-            where:{
-                userId: getUserId
-            }
-        }).then(function(data){
-            data.forEach(resume =>{
-                console.log(resume.dataValues.resumeName);
-                res.json(resume.dataValues.resumeName);
-            })
-        }).catch(err =>{
-            console.log(err)
-        })
-        allResume;
-    });
 
     app.post("/api/newResume", (req, res) => {
         db.Resume.create(req.body)
