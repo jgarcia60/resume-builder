@@ -20,6 +20,18 @@ module.exports = function(app){
           });
         }
       });
+
+    app.post("/api/signin", function(req,res){
+        console.log(req.body);
+        db.User.create(req.body)
+        .then(function(result){
+            console.log(result);
+            res.json(result);
+        })
+        .catch(err =>{
+            console.log(err);
+        })
+    })
         
 
     app.post("/api/newResume", (req, res) => {

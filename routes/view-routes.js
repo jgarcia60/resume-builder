@@ -10,6 +10,9 @@ router.get("/", function(req,res){   
     }
     res.render("login");
 });
+router.get("/signin", function(req,res){
+    res.render("signin");
+})
 
 router.get("/index",isAuthenticated, function(req,res){
         res.render("index")
