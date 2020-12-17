@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("button").on("click", function(event){
+    $("form.login").on("submit", function(event){
         event.preventDefault();
         let userEmail = $(".userEmail").val();
         let userPwd = $(".userPassword").val();
@@ -18,17 +18,5 @@ $(document).ready(function(){
         }).catch(err =>{
             console.log(err);
         })
-        
-        //get resumes for this user
-        // $.ajax({
-        //     method: "GET",
-        //     url: "/api/login/" + userEmail
-        // }).then(function(){
-        //     console.log("bring user data")
-        //     window.location.replace("/index");
-        // }).catch(err=>{
-        //     console.log(err);
-        // })
-
     })
 })
