@@ -1,4 +1,4 @@
-// console.log("hello world");
+console.log("hello world");
 
 
 $(document).ready(function() {
@@ -189,7 +189,7 @@ const userId = JSON.parse(localStorage.getItem("userId"));
 
 
     const resume = {
-        userId: userId,
+        userId: 1,
         resumeName: resumeFileName,
         objective: objectiveStatement,
 
@@ -248,7 +248,7 @@ const userId = JSON.parse(localStorage.getItem("userId"));
         console.log(resume);
         $.ajax({
             method: "POST",
-            url: "/api/resumes",
+            url: "/api/newResume",
             data: resume,
         }).then(function(res) {
             console.log("posted resume");
