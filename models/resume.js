@@ -173,31 +173,5 @@ module.exports = function(sequelize, DataTypes) {
         
     })
 
-    // Resume.associate = function (models) {
-    //     Resume.belongsTo(models.User, {
-    //         foreignKey: "userId",
-    //         // targetKey: 'id'
-    //     });
-
-    //     Resume.hasMany(models.Experience, {
-    //         onDelete: "cascade",
-    //         foreignKey: "resumeId",
-    //         // sourceKey: 'userID'
-    //     });
-
-    //     Resume.hasMany(models.Education, {
-    //         onDelete: "cascade",
-    //         foreignKey: "resumeId",
-    //         // sourceKey: 'userID'
-    //     });
-
-    //     Resume.hasMany(models.Project, {
-    //         onDelete: "cascade",
-    //         foreignKey: "fk_resumeid",
-    //         // sourceKey: 'userId'
-    //     });
-
-    // }
-
     return Resume;
 }
