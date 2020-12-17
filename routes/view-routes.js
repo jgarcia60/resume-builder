@@ -1,24 +1,33 @@
 var express = require('express');
 const db = require('../models');
 var router = express.Router();
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 
-router.get("/", function(req,res){
-    res.render("login");    
+
+router.get("/", function(req,res){   
+    if(req.user){
+        res.render('index');
+    }
+    res.render("login");
 });
 
-router.get("/index", (req, res)=>{
-    db.User.findAll({}).then((result)=>{
-        res.render("index", result)
-    })
-});
+router.get("/index",isAuthenticated, function(req,res){
+        res.render("index")
+    });
 
 router.get("/newResume", (req, res)=>{
     res.render("form")
 })
 
-// uncomment this code if you would like to see how the template looks
+//uncomment this code to view the template
 // router.get("/template", (req, res)=>{
 //     res.render("templateOne")
 // })
+
+router.get('/:editResume', (req, res) => {
+    res.render("formEdit");
+})
+//not sure what goes into the specific resume update form
+
 
 module.exports = router;
