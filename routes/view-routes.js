@@ -19,9 +19,15 @@ router.get("/newResume", (req, res)=>{
     res.render("form")
 })
 
+//uncomment this code to view the template
+// router.get("/template", (req, res)=>{
+//     res.render("templateOne")
+// })
+
 router.get('/:editResume', (req, res) => {
     res.render("formEdit");
 })
 //not sure what goes into the specific resume update form
+
 
 module.exports = router;
