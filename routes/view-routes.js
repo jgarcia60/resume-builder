@@ -15,7 +15,7 @@ router.get("/signin", function(req,res){
 })
 
 router.get("/index",isAuthenticated, function(req,res){
-        res.render("index")
+        res.render("index", req.user)
     });
 
 router.get("/newResume", (req, res)=>{

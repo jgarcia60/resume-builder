@@ -5,22 +5,34 @@ var passport = require("../config/passport");
 module.exports = function(app){
     //verify the user (user authentication)
     app.post("/api/login",passport.authenticate("local") ,function(req,res){
-        console.log(req.body);
-        res.json(req.body);
+        console.log(req.user);
+        res.json(req.user);
     })
-    app.get("/api/user_data", function(req, res) {
+    app.get("/api/user_resume", function(req, res) {
         if (!req.user) {
           res.json({});
         } else {
-            console.log(req.user);
-            res.json({
-            userName: req.user.userName,
-            email: req.user.email,
-            id: req.user.id
-          });
+            db.Resume.findAll({
+                where:{
+                    userId : req.user.id
+                }
+            })
+            .then(function(result){
+                console.log(result);
+                res.json(result);
+            })
+            .catch(err =>{
+                console.log(err);
+            })
         }
       });
-
+    app.get("/api/user_data", function(req,res){
+        if(!req.user){
+            res.json({});
+        }else{
+            res.json(req.user);
+        }
+    })
     app.post("/api/signin", function(req,res){
         console.log(req.body);
         db.User.create(req.body)
