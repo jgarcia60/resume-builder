@@ -14,20 +14,21 @@ $(document).ready(function(){
             }
         }).then(function(){
             console.log("data sent!");
+            window.location.replace("/index");
         }).catch(err =>{
             console.log(err);
         })
         
         //get resumes for this user
-        $.ajax({
-            method: "GET",
-            url: "/api/login/" + userEmail
-        }).then(function(){
-            console.log("bring user data")
-            window.location.replace("/index");
-        }).catch(err=>{
-            console.log(err);
-        })
+        // $.ajax({
+        //     method: "GET",
+        //     url: "/api/login/" + userEmail
+        // }).then(function(){
+        //     console.log("bring user data")
+        //     window.location.replace("/index");
+        // }).catch(err=>{
+        //     console.log(err);
+        // })
 
     })
 })
