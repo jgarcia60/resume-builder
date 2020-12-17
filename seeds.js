@@ -23,6 +23,9 @@ let seed = {
  
         db.Resume.create({
             userId: 1,
+            name: "Jonathan Garcia",
+            email: "jgarcia9@gmail.com",
+            phoneNumber: "123456789",
             resumeName: "secondName",
             objective: "To see if this works",
             school: "Georgia Tech",
