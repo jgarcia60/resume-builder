@@ -193,7 +193,7 @@ const userId = JSON.parse(localStorage.getItem("userId"));
 
 
     const resume = {
-        userId: 1,
+        userId: userId,
         resumeName: resumeFileName,
         objective: objectiveStatement,
 
