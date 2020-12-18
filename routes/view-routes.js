@@ -13,7 +13,10 @@ router.get("/", function(req,res){   
 router.get("/signin", function(req,res){
     res.render("signin");
 })
-
+router.get("/logout", function(req, res) {
+    req.logout();
+    res.redirect("/");
+  });
 router.get("/index",isAuthenticated, function(req,res){
         res.render("index", req.user)
     });
