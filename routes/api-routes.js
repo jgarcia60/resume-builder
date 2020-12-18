@@ -105,7 +105,7 @@ module.exports = function(app){
         })
     })
 
-    router.delete("/api/resume/:id", (req, res) => {
+    app.delete("/api/resumes/:id", (req, res) => {
         db.Resume.destroy({
           where: {
             id: req.params.id,
