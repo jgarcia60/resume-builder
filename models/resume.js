@@ -81,7 +81,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.BOOLEAN,
             defaultValue: false,
         },
-        empoyerB: {
+        employerB: {
             type: DataTypes.STRING,
 
         },
