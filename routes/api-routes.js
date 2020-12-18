@@ -105,5 +105,18 @@ module.exports = function(app){
         })
     })
 
-    //get route for resumeId
+    //route to get specific resume Id
+    app.get('/templateOne/:resumeId', (req, res) => {
+        db.Resume.findOne({
+            where: {
+                id: req.params.resumeId
+            }
+        }).then((result) => {
+            // return res.json(result);
+            res.render("templateTwo", result);
+        }).catch((err) => {
+            console.log(err);
+        })
+    })
+
 }
