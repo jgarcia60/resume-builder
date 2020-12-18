@@ -32,8 +32,8 @@ router.get('/:editResume', (req, res) => {
 })
 //not sure what goes into the specific resume update form
 
-router.get('/templateTwo', (req, res) => {
-    res.render('templateTwo');
+router.get('/templateOne/:resumeId', (req, res) => {
+    res.render('templateOne');
 })
 
 module.exports = router;
