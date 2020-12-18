@@ -44,7 +44,7 @@ router.get('/templateOne/:resumeId', (req, res) => {
             id: req.params.resumeId,
         }
     }).then((resume) => {
-        res.render("templateTwo", resume.dataValues)
+        res.render("custom", resume.dataValues)
     })
     // res.render('templateTwo', req.body);
 })

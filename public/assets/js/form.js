@@ -79,6 +79,9 @@ $(document).ready(function() {
         const projectCounter = JSON.parse(localStorage.getItem("projectCounter"));
     
         const resumeFileName = $("#resumeName").val().trim();
+        const name = $('.name').val();
+        const email = $('.email').val();
+        const phoneNumber = $('.phoneNumber').val();
         const objectiveStatement = $("#objective").val();
         const skills= $("#skills").val();
         const awards = $("#awards").val();
@@ -195,6 +198,9 @@ const userId = JSON.parse(localStorage.getItem("userId"));
     const resume = {
         userId: userId,
         resumeName: resumeFileName,
+        name: name,
+        email: email,
+        phoneNumber: phoneNumber,
         objective: objectiveStatement,
 
         school: school,
@@ -257,6 +263,8 @@ const userId = JSON.parse(localStorage.getItem("userId"));
         }).then(function(res) {
             console.log("posted resume");
             res.send(res);
+            // window.location.replace('/index');
         });
+        window.location.replace('/index');
     });
 });
