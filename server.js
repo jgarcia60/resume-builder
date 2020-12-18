@@ -11,9 +11,21 @@ const {
 } = require('@handlebars/allow-prototype-access');
 
 const db = require('./models');
-
+let connection;
 const app = express();
 const PORT = process.env.PORT || 8080;
+if (process.env.JAWSDB_URL) {
+    connection.mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+    connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: 'Mickey19',
+        database: 'resumes_db'
+    })
+}
+
+connection.connect();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
