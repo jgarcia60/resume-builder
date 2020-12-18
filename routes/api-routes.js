@@ -109,10 +109,11 @@ module.exports = function(app){
     app.get('/templateOne/:resumeId', (req, res) => {
         db.Resume.findOne({
             where: {
-                id: req.params.id
+                id: req.params.resumeId
             }
         }).then((result) => {
-            return res.json(result);
+            // return res.json(result);
+            res.render("templateTwo", result);
         }).catch((err) => {
             console.log(err);
         })
