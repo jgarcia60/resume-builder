@@ -1,0 +1,60 @@
+.is-four-fifths {
+    /* background-color: red; */
+}
+
+.name {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.lightGrey {
+    color: rgb(143, 134, 134);
+    font-weight: 350;
+}
+
+.light-bold {
+    font-weight: 500;
+}
+.contact-info {
+    padding:0;
+    align-self: left;
+}
+.column {
+    padding-left: 0;
+    padding-bottom: 0;
+}
+.header {
+    font-weight: 700;
+    color: rgb(70, 103, 250);
+    font-size: 18px;
+}
+
+.border {
+    border-bottom: solid black;
+}
+
+.focus {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+.space {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.degree {
+    font-style: italic;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.date {
+    text-align: right;
+    align-self: right;
+}

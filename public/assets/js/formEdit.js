@@ -11,6 +11,9 @@ $(document).ready(function() {
     $("#updateButton").on("click", function() {
         const resumeId = $(this).data("id");
         const resumeFileName = $("#resumeName").val().trim();
+        const name = $('.name').val();
+        const email = $('.email').val();
+        const phoneNumber = $('.phoneNumber').val();
         const objectiveStatement = $("#objective").val();
         const skills= $("#skills").val();
         const awards = $("#awards").val();
@@ -92,7 +95,9 @@ $(document).ready(function() {
         const resume = {
             resumeName: resumeFileName,
             objective: objectiveStatement,
-    
+            name: name,
+            email: email,
+            phoneNumber: phoneNumber,
             school: school,
             degree: degree,
             startDate: startDate,
@@ -154,7 +159,8 @@ $(document).ready(function() {
         }).then(function(res) {
             res.send(res);
             //redirect to list?
-        })
+        });
+        window.location.replace('/index');
     })
     
     //go back/cancel
