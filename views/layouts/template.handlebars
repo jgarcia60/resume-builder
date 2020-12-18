@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
+
 <head>
 
 	<title>Resume Builder
@@ -10,145 +11,218 @@
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 
-	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" /> 
+	<link rel="stylesheet" type="text/css"
+		href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="resume.css" media="all" />
 
 </head>
+
 <body>
 
-<div id="doc2" class="yui-t7">
-	<div id="inner">
-	
-		<div id="resumeName">
-			<div class="yui-gc">
-				<div class="yui-u first">
-					<h1></h1>
-					<h2>{{name}}</h2>
+	<div id="doc2" class="yui-t7">
+		<div id="inner">
+
+			<div id="resumeName">
+				<div class="yui-gc">
+					<div class="yui-u first">
+						<h1></h1>
+						<h2>{{name}}</h2>
+					</div>
+
+					<div class="yui-u">
+						<div class="contact-info">
+							<h3><a href="mailto:name@yourdomain.com">name@yourdomain.com</a></h3>
+						</div>
+						<!--// .contact-info -->
+					</div>
 				</div>
+				<!--// .yui-gc -->
+			</div>
+			<!--// hd -->
 
-				<div class="yui-u">
-					<div class="contact-info">
-						<h3><a href="mailto:name@yourdomain.com">name@yourdomain.com</a></h3>
-					</div><!--// .contact-info -->
-				</div>
-			</div><!--// .yui-gc -->
-		</div><!--// hd -->
+			<div id="bd">
+				<div id="objectiveStatement">
+					<div class="yui-b">
 
-		<div id="bd">
-			<div id="objectiveStatement">
-				<div class="yui-b">
-
-					<div class="yui-gf">
-						<div class="yui-u first">
-							<h2>Objective </h2>
+						<div class="yui-gf">
+							<div class="yui-u first">
+								<h2>Objective </h2>
+							</div>
+							<div class="yui-u">
+								<p class="enlarge">
+									{{objectiveStatement}}
+								</p>
+							</div>
 						</div>
-						<div class="yui-u">
-							<p class="enlarge">
-								{{objectiveStatement}}
-							</p>
-						</div>
-					</div><!--// .yui-gf -->
+						<!--// .yui-gf -->
 
-					<div class="Skills">
-						<div class="yui-u first">
-							<h2>Skills</h2>
-						</div>
-						<div class="yui-u">
-							<div class="skills">
-								<div class="yui-u first">
+						<div class="Skills">
+							<div class="yui-u first">
+								<h2>Skills</h2>
+							</div>
+							<div class="yui-u">
+								<div class="skills">
+									<div class="yui-u first">
+									</div>
+									<div class="yui-u">
+										<ul class="talent">
+											<li>{{skills}}</li>
+											<li>{{skills}}</li>
+											<li class="last">{{skills}}</li>
+										</ul>
+
+										<ul class="talent">
+											<li>{{skills}}</li>
+											<li>{{skills}}</li>
+											<li class="last">{{skills}}</li>
+										</ul>
+
+										<ul class="talent">
+											<li>{{skills}}</li>
+											<li>{{skills}}</li>
+											<li class="last">{{skills}}</li>
+										</ul>
+									</div>
 								</div>
-								<div class="yui-u">
-									<ul class="talent">
-										<li>{{skills}}</li>
-										<li>{{skills}}</li>
-										<li class="last">{{skills}}</li>
-									</ul>
-		
-									<ul class="talent">
-										<li>{{skills}}</li>
-										<li>{{skills}}</li>
-										<li class="last">{{skills}}</li>
-									</ul>
-		
-									<ul class="talent">
-										<li>{{skills}}</li>
-										<li>{{skills}}</li>
-										<li class="last">{{skills}}</li>
-									</ul>
-								</div>
-							</div><!--// .yui-gf-->
-		
+								<!--// .yui-gf-->
+
+							</div>
 						</div>
-					</div><!--// .yui-gf -->
+						<!--// .yui-gf -->
 
-					<div class="yui-gf">
-	
-						<div class="employer">
-							<h2>Experience</h2>
-						</div><!--// .yui-u -->
+						<div class="yui-gf">
 
-						<div class="yui-u">
-							{{#if isEmployer}}
-							<div class="job">
-								<h2>{{employer}}</h2>
-								<h3>{{title}}</h3>
-								<h4>{{jobStart}}-{{jobEnd}}</h4>
-								<p>{{description}} </p>
+							<div class="employer">
+								<h2>Experience</h2>
 							</div>
+							<!--// .yui-u -->
+
+							<div class="yui-u">
+								{{#if isEmployer}}
+								<div class="job">
+									<h2>{{employer}}</h2>
+									<h3>{{title}}</h3>
+									<h4>{{jobStart}}-{{jobEnd}}</h4>
+									<p>{{description}} </p>
+								</div>
 								{{/if}}
-									{{#if isEmployerB}}
-							<div class="job">
-								<h2>{{employerB}}</h2>
-								<h3>{{title}}</h3>
-								<h4>{{jobStart}}-{{jobEnd}}</h4>
-								<p>{{description}} </p>
-							</div>
-								{{/if}}
-							<div class="job">
-								<h2>{{employer}}</h2>
-								<h3>{{title}}</h3>
-								<h4>{{jobStart}}-{{jobEnd}}</h4>
-								<p>{{description}} </p>
-							</div>
 								{{#if isEmployerB}}
-							<div class="job">
-								<h2>{{employer}}</h2>
-								<h3>{{title}}</h3>
-								<h4>{{jobStart}}-{{jobEnd}}</h4>
-								<p>{{description}} </p>
-							</div>
+								<div class="job">
+									<h2>{{employerB}}</h2>
+									<h3>{{title}}</h3>
+									<h4>{{jobStart}}-{{jobEnd}}</h4>
+									<p>{{description}} </p>
+								</div>
 								{{/if}}
-						</div><!--// .yui-u -->
-					</div><!--// .yui-gf -->
+								{{#if isEmployerC}}
+								<div class="job">
+									<h2>{{employer}}</h2>
+									<h3>{{title}}</h3>
+									<h4>{{jobStart}}-{{jobEnd}}</h4>
+									<p>{{description}} </p>
+								</div>
 
+								{{/if}}
 
-					<div class="school">
-						<div class="yui-u first">
-							<h2>Education</h2>
+							</div>
+							<!--// .yui-u -->
 						</div>
-						<div class="yui-u">
-							<h2> {{school}}</h2>
-							<h3><strong>{{degree}} &mdash; </strong> </h3>
-							<h3> {{startDate}} &mdash; {{endDate}}</h3>
+						<!--// .yui-gf -->
+
+						{{#if isSchool}}
+						<div class="school">
+							<div class="yui-u first">
+								<h2>Education</h2>
+							</div>
+							<div class="yui-u">
+								<h2> {{school}}</h2>
+								<h3><strong>{{degree}} &mdash; </strong> </h3>
+								<h3> {{startDate}} &mdash; {{endDate}}</h3>
+							</div>
 						</div>
-					</div><!--// .yui-gf -->
+						{{/if}}
+						{{#if isSchoolB}}
+						<div class="school">
+							<div class="yui-u first">
+								<h2>Education</h2>
+							</div>
+							<div class="yui-u">
+								<h2> {{SchoolB}}</h2>
+								<h3><strong>{{degreeB}} &mdash; </strong> </h3>
+								<h3> {{startDateB}} &mdash; {{endDateB}}</h3>
+							</div>
+						</div>
+						{{/if}}
+						{{#if isSchoolC}}
+						<div class="school">
+							<div class="yui-u first">
+								<h2>Education</h2>
+							</div>
+							<div class="yui-u">
+								<h2> {{SchoolC}}</h2>
+								<h3><strong>{{degreeC}} &mdash; </strong> </h3>
+								<h3> {{startDateC}} &mdash; {{endDateC}}</h3>
+							</div>
+						</div>
+						{{/if}}
+						<!--// .yui-gf -->
 
 
-				</div><!--// .yui-b -->
-			</div><!--// yui-main -->
-		</div><!--// bd -->
+					</div>
+					<!--// .yui-b -->
+				</div>
+				<!--// yui-main -->
+			</div>
+			<!--// bd -->
+			{{#if project}}
+			<div class="project">
+				<div class="yui-u first">
+					<h2>Project</h2>
+				</div>
+				<div class="yui-u">
+					<h2> {{Project}}</h2>
+					<h3><strong>{{isProject}} &mdash; </strong> </h3>
+				</div>
+			</div>
+			{{/if}}
+			{{#if projectB}}
+			<div class="project">
+				<div class="yui-u first">
+					<h2>Project</h2>
+				</div>
+				<div class="yui-u">
+					<h2> {{projectB}}</h2>
+					<h3><strong>{{isProjectB}} &mdash; </strong> </h3>
+				</div>
+			</div>
+			{{/if}}
+			{{#if projectC}}
+			<div class="project">
+				<div class="yui-u first">
+					<h2>Project</h2>
+				</div>
+				<div class="yui-u">
+					<h2> {{projectC}}</h2>
+					<h3><strong>{{isProjectC}} &mdash; </strong> </h3>
+				</div>
+			</div>
+			{{/if}}
 
-		<div id="ft">
-			<h3><a id="pdf" href="#">Download PDF</a></h3>
-			<p>Jonathan Doe &mdash; <a href="mailto:name@yourdomain.com">name@yourdomain.com</a> &mdash; (313) - 867-5309</p>
-		</div><!--// footer -->
 
-	</div><!-- // inner -->
+			<div id="ft">
+				<h3><a id="pdf" href="#">Download PDF</a></h3>
+				<p>Jonathan Doe &mdash; <a href="mailto:name@yourdomain.com">name@yourdomain.com</a> &mdash; (313) -
+					867-5309</p>
+			</div>
+			<!--// footer -->
+
+		</div><!-- // inner -->
 
 
-</div><!--// doc -->
+	</div>
+	<!--// doc -->
 
 
 </body>
-</html>
 
+</html>
