@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
     $("#cancel").on("click", function() {
-        window.history.back();
+        window.location.replace('/index');
     })
     
     //save as new resume, but maybe for "future development"
