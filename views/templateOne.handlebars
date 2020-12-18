@@ -1,104 +1,86 @@
 <div class="resume">
-  <div class="base">
-    <div class="profile">
-      <div class="photo">
-        <!--<img src="" /> -->
-        <i class="fas fa-rocket"></i>
-      </div>
-      <div class="info">
-        <h1 class="name">User's Name</h1>
-      </div>
+    <div class="base">
+        <div class="profile">
+            <div class="photo">
+                <!--<img src="" /> -->
+                <i class="fas fa-rocket"></i>
+            </div>
+            <div class="info">
+                <h1 class="name">{{name}}</h1>
+            </div>
+        </div>
+        <div class="about">
+            <h3>About Me</h3> {{objective}}
+        </div>
+        <div class="contact">
+            <h3>Contact Me</h3>
+            <div class="call"><a href="tel:123-456-7890"><i class="fas fa-phone"></i><span>{{phoneNumber}}</span></a>
+            </div>
+            <div class="email"><a href="mailto:astronaomical@gmail.com"><i
+                        class="fas fa-envelope"></i><span>{{email}}</span></a></div>
+        </div>
     </div>
-    <div class="about">
-      <h3>About Me</h3> Info goes here
+    <div class="func">
+        <div class="work">
+            {{#if employer}}
+            <h3><i class="fa fa-briefcase"></i>Experience</h3>
+            <ul>
+                <li><span>{{title}} -<br>{{employer}}</span><small>{{description}}</small><small>{{jobStart}} -
+                        {{jobEnd}}</small></li>
+            </ul>
+        </div>
+        {{/if}}
+        {{#if employerB}}
+        <h3><i class="fa fa-briefcase"></i>Experience</h3>
+        <ul>
+            <li><span>{{title}} -<br>{{employer}}</span><small>{{description}}</small><small>{{jobStart}} -
+                    {{jobEnd}}</small></li>
+        </ul>
     </div>
-    <div class="contact">
-      <h3>Contact Me</h3>
-      <div class="call"><a href="tel:123-456-7890"><i class="fas fa-phone"></i><span>phone number here</span></a></div>
-      <div class="email"><a href="mailto:astronaomical@gmail.com"><i class="fas fa-envelope"></i><span>email here</span></a></div>
-    </div>
-  </div>
-  <div class="func">
-    <div class="work">
-      <h3><i class="fa fa-briefcase"></i>Experience</h3>
-      <ul>
-        <li><span>title here -<br>employer here</span><small>description</small><small>Apr 2018 - Now</small></li>
-      </ul>
-    </div>
-    <div class="edu">
-      <h3><i class="fa fa-graduation-cap"></i>Education</h3>
-      <ul>
-        <li><span>Degree<br>program</span><small>start date - end-date</small></li>
-      </ul>
-    </div>
-    <div class="skills-prog">
-      <h3><i class="fas fa-code"></i>Programming Skills</h3>
-      <ul>
-        <li data-percent="95"><span>HTML5</span>
-          <div class="skills-bar">
-            <div class="bar"></div>
-          </div>
+    {{/if}}
+    {{#if employerC}}
+    <h3><i class="fa fa-briefcase"></i>Experience</h3>
+    <ul>
+        <li><span>{{title}} -<br>{{employer}}</span><small>{{description}}</small><small>{{jobStart}} -
+                {{jobEnd}}</small></li>
+    </ul>
+</div>
+{{/if}}
+{{#if school}}
+<div class="edu">
+    <h3><i class="fa fa-graduation-cap"></i>Education</h3>
+    <ul>
+        <li><span>{{degree}}<br>{{program}}</span><small>{{startDate}} - {{endDate}}</small></li>
+    </ul>
+</div>
+{{/if}}
+{{#if schoolB}}
+<div class="edu">
+    <h3><i class="fa fa-graduation-cap"></i>Education</h3>
+    <ul>
+        <li><span>{{degree}}<br>{{program}}</span><small>{{startDate}} - {{endDate}}</small></li>
+    </ul>
+</div>
+{{/if}}
+{{#if schoolC}}
+<div class="edu">
+    <h3><i class="fa fa-graduation-cap"></i>Education</h3>
+    <ul>
+        <li><span>{{degree}}<br>{{program}}</span><small>{{startDate}} - {{endDate}}</small></li>
+    </ul>
+</div>
+{{/if}}
+<div class="skills-prog">
+    <h3><i class="fas fa-code"></i>Programming Skills</h3>
+    <ul>
+        {{#each}}
+        <li data-percent="95"><span>{{skills}}</span>
+            <div class="skills-bar">
+                <div class="bar"></div>
+            </div>
         </li>
-        <li data-percent="90"><span>CSS3 & SCSS</span>
-          <div class="skills-bar">
-            <div class="bar"></div>
-          </div>
-        </li>
-        <li data-percent="60"><span>JavaScript</span>
-          <div class="skills-bar">
-            <div class="bar"></div>
-          </div>
-        </li>
-        <li data-percent="50"><span>jQuery</span>
-          <div class="skills-bar">
-            <div class="bar"></div>
-          </div>
-        </li>
-        <li data-percent="40"><span>JSON</span>
-          <div class="skills-bar">
-            <div class="bar"></div>
-          </div>
-        </li>
-        <li data-percent="55"><span>PHP</span>
-          <div class="skills-bar">
-            <div class="bar"></div>
-          </div>
-        </li>
-        <li data-percent="40"><span>MySQL</span>
-          <div class="skills-bar">
-            <div class="bar"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="skills-soft">
-      <h3><i class="fas fa-bezier-curve"></i>Software Skills</h3>
-      <ul>
-        <li data-percent="90">
-          <svg viewbox="0 0 100 100">
-            <circle cx="50" cy="50" r="45"></circle>
-            <circle class="cbar" cx="50" cy="50" r="45"></circle>
-          </svg><span>Illustrator</span><small></small>
-        </li>
-        <li data-percent="75">
-          <svg viewbox="0 0 100 100">
-            <circle cx="50" cy="50" r="45"></circle>
-            <circle class="cbar" cx="50" cy="50" r="45"></circle>
-          </svg><span>Photoshop</span><small></small>
-        </li>
-        <li data-percent="85">
-          <svg viewbox="0 0 100 100">
-            <circle cx="50" cy="50" r="45"></circle>
-            <circle class="cbar" cx="50" cy="50" r="45"></circle>
-          </svg><span>InDesign</span><small></small>
-        </li>
-        <li data-percent="65">
-          <svg viewbox="0 0 100 100">
-            <circle cx="50" cy="50" r="45"></circle>
-            <circle class="cbar" cx="50" cy="50" r="45"></circle>
-          </svg><span>Dreamweaver</span><small></small>
-        </li>
-      </ul>
-    </div>
-  </div>
+        {{/each}}
+    </ul>
+</div>
+</div>
 </div>
