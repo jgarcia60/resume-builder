@@ -31,8 +31,6 @@ router.get('/:editResume', (req, res) => {
     res.render("formEdit");
 })
 //not sure what goes into the specific resume update form
-
-router.get('/templateOne/:resumeId', (req, res) => {
     db.Resume.findOne({
         where: {
             id: req.params.resumeId,
