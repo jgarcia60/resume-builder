@@ -105,18 +105,19 @@ module.exports = function(app){
         })
     })
 
-    //route to get specific resume Id
-    // app.get('/templateOne/:resumeId', (req, res) => {
-    //     db.Resume.findOne({
-    //         where: {
-    //             id: req.params.resumeId
-    //         }
-    //     }).then((result) => {
-    //         // return res.json(result);
-    //         res.render("templateTwo", result);
-    //     }).catch((err) => {
-    //         console.log(err);
-    //     })
-    // })
+    router.delete("/api/resume/:id", (req, res) => {
+        db.Resume.destroy({
+          where: {
+            id: req.params.id,
+          },
+        })
+          .then((response) => {
+            console.log(response);
+            res.json(response);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      });
 
 }
