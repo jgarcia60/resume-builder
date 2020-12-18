@@ -1,8 +1,10 @@
+<head>
+        <link href="../assets/css/templateOne.css" rel="stylesheet" type="text/css"/>
+</head>
 <div class="resume">
     <div class="base">
         <div class="profile">
             <div class="photo">
-                <!--<img src="" /> -->
                 <i class="fas fa-rocket"></i>
             </div>
             <div class="info">
@@ -14,10 +16,12 @@
         </div>
         <div class="contact">
             <h3>Contact Me</h3>
-            <div class="call"><a href="tel:123-456-7890"><i class="fas fa-phone"></i><span>{{phoneNumber}}</span></a>
+            <div class="call">
+            <span>{{phoneNumber}}</span>
             </div>
-            <div class="email"><a href="mailto:astronaomical@gmail.com"><i
-                        class="fas fa-envelope"></i><span>{{email}}</span></a></div>
+            <div class="email">
+                <span>{{email}}</span>
+            </div>
         </div>
     </div>
     <div class="func">
@@ -31,7 +35,6 @@
         </div>
         {{/if}}
         {{#if employerB}}
-        <h3><i class="fa fa-briefcase"></i>Experience</h3>
         <ul>
             <li><span>{{title}} -<br>{{employer}}</span><small>{{description}}</small><small>{{jobStart}} -
                     {{jobEnd}}</small></li>
@@ -39,7 +42,6 @@
     </div>
     {{/if}}
     {{#if employerC}}
-    <h3><i class="fa fa-briefcase"></i>Experience</h3>
     <ul>
         <li><span>{{title}} -<br>{{employer}}</span><small>{{description}}</small><small>{{jobStart}} -
                 {{jobEnd}}</small></li>
@@ -56,7 +58,6 @@
 {{/if}}
 {{#if schoolB}}
 <div class="edu">
-    <h3><i class="fa fa-graduation-cap"></i>Education</h3>
     <ul>
         <li><span>{{degree}}<br>{{program}}</span><small>{{startDate}} - {{endDate}}</small></li>
     </ul>
@@ -64,22 +65,25 @@
 {{/if}}
 {{#if schoolC}}
 <div class="edu">
-    <h3><i class="fa fa-graduation-cap"></i>Education</h3>
     <ul>
         <li><span>{{degree}}<br>{{program}}</span><small>{{startDate}} - {{endDate}}</small></li>
     </ul>
 </div>
 {{/if}}
 <div class="skills-prog">
-    <h3><i class="fas fa-code"></i>Programming Skills</h3>
+    <h3><i class="fas fa-code"></i>Skills</h3>
     <ul>
-        {{#each skills}}
-        <li data-percent="95"><span>{{skills}}</span>
-            <div class="skills-bar">
-                <div class="bar"></div>
-            </div>
+        <li><span>{{skills}}</span>
+            </span>
         </li>
-        {{/each}}
+    </ul>
+</div>
+<div class="skills-prog">
+    <h3><i class="fas fa-code"></i>Awards</h3>
+    <ul>
+        <li><span>{{Awards}}</span>
+            </span>
+        </li>
     </ul>
 </div>
 </div>

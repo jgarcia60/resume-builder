@@ -33,7 +33,14 @@ router.get('/:editResume', (req, res) => {
 //not sure what goes into the specific resume update form
 
 router.get('/templateOne/:resumeId', (req, res) => {
-    res.render('templateTwo');
+    db.Resume.findOne({
+        where: {
+            id: req.params.resumeId,
+        }
+    }).then((resume) => {
+        res.render("templateTwo", resume.dataValues)
+    })
+    // res.render('templateTwo', req.body);
 })
 
 module.exports = router;
