@@ -27,8 +27,15 @@ router.get("/newResume", (req, res)=>{
 //     res.render("templateOne")
 // })
 
-router.get('/:editResume', (req, res) => {
-    res.render("formEdit");
+router.get('/:resumeId', (req, res) => {
+    db.Resume.findOne({
+        where: {
+            id: req.params.resumeId,
+        }
+    }).then((resume) => {
+        res.render("formEdit", resume.dataValues)
+    })
+    // res.render('templateTwo', req.body);
 })
 //not sure what goes into the specific resume update form
 router.get('/templateOne/:resumeId', (req, res) => {
