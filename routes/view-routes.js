@@ -33,7 +33,7 @@ router.get('/:editResume', (req, res) => {
 //not sure what goes into the specific resume update form
 
 router.get('/templateOne/:resumeId', (req, res) => {
-    res.render('templateOne');
+    res.render('templateTwo');
 })
 
 module.exports = router;
