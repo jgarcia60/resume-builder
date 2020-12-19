@@ -1,144 +1,149 @@
-        <main class="columns">
-            <section class="column is-half is-offset-one-quarter formContainer">
-                <section>
-                    <form class="field">
-                        <label class="label">Resume Name</label>
-                        <div class="control">
-                            <input type="text" id="resumeName" size="30"><br><br>
-                        </div>
-                    </form>
-                </section>
-                <div class="field is-horizontal columns">
-                    <div class="column">
-                        <label class="label">Name</label>
-                        <div class="control">
-                            <input type="text" class="name" size="25">
-                        </div>
+<body class="has-background-info-light">
+    <main class="has-text-black">
+        <section class="column is-half is-offset-one-quarter formContainer">
+            <section>
+                <form class="field">
+                    <label class="label">Resume Name</label>
+                    <div class="control">
+                        <input type="text" id="resumeName" size="30"><br><br>
                     </div>
-                    <div class="column">
-                        <label class="label">Email</label>
-                        <div class="control">
-                            <input type="text" class="email"size="25"><br>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <label class="label">Phone Number</label>
-                        <div class="control">
-                            <input type="text" class="phoneNumber" size="25"><br>
-                        </div>
+                </form>
+            </section>
+            <div class="field is-horizontal columns">
+                <div class="column">
+                    <label class="label">Name</label>
+                    <div class="control">
+                        <input type="text" class="name" size="25">
                     </div>
                 </div>
-                <section class="objectiveContainer">
-                    <form id="objectiveForm">
-                        <label class="label">Objective Statement</label>
-                        <textarea type="text" class="textarea" id="objective" name="objective" rows="3" cols="20" placeholder="What is your objective?"></textarea><br>
-                    </form>
-                </section>
-                <section class="education" data-index="1">
-                    <form id="educationForm" class="field">
-                        <label class="label">Education</label>
-                        <label class="educationEntries">School</label>
-                        <div class="control">
-                            <input type="text" class="school" name="school" size="40"><br>
-                        </div>
-                        <label class="educationEntries">Degree</label>
-                        <div class="control">
-                            <input type="text" class="degree" name="degree" size="40"><br>
-                        </div>
-                        <div class="field is-horizontal columns">
-                            <div class="column">
-                                <label class="educationEntries">Start Date</label>
-                                <div class="control">
-                                    <input type="text" class="startDate" name="startDate" size="40">
-                                </div>
+                <div class="column">
+                    <label class="label">Email</label>
+                    <div class="control">
+                        <input type="text" class="email" size="25"><br>
+                    </div>
+                </div>
+                <div class="column">
+                    <label class="label">Phone Number</label>
+                    <div class="control">
+                        <input type="text" class="phoneNumber" size="25"><br>
+                    </div>
+                </div>
+            </div>
+            <section class="objectiveContainer">
+                <form id="objectiveForm">
+                    <label class="label">Objective Statement</label>
+                    <textarea type="text" class="textarea" id="objective" name="objective" rows="3" cols="20"
+                        placeholder="What is your objective?"></textarea><br>
+                </form>
+            </section>
+            <section class="education" data-index="1">
+                <form id="educationForm" class="field">
+                    <label class="label">Education</label>
+                    <label class="educationEntries">School</label>
+                    <div class="control">
+                        <input type="text" class="school" name="school" size="40"><br>
+                    </div>
+                    <label class="educationEntries">Degree</label>
+                    <div class="control">
+                        <input type="text" class="degree" name="degree" size="40"><br>
+                    </div>
+                    <div class="field is-horizontal columns">
+                        <div class="column">
+                            <label class="educationEntries">Start Date</label>
+                            <div class="control">
+                                <input type="text" class="startDate" name="startDate" size="40">
                             </div>
-                            <div class="column">
-                                <label class="educationEntries">End Date</label>
-                                <div class="control">
-                                    <input type="text" class="endDate" name="endDate" size="40"><br>
-                                </div>
+                        </div>
+                        <div class="column">
+                            <label class="educationEntries">End Date</label>
+                            <div class="control">
+                                <input type="text" class="endDate" name="endDate" size="40"><br>
                             </div>
                         </div>
-                        <label class="educationEntries">Program</label>
-                        <div class="control">
-                            <input type="text" class="program" name="program" size="40"><br>
-                        </div>
-                    </form>
-                </section>
-                <button type="button" id="addEducation">Add Education</button><br><br>
-                <section class="experience" data-index="1">
-                    <form id="experienceForm">
-                        <label class="label">Experience</label>
-                        <label class="experienceEntries">Employer</label>
-                        <div class="control">
-                            <input type="text" class="employer" name="employer" size="40"><br>
-                        </div>
+                    </div>
+                    <label class="educationEntries">Program</label>
+                    <div class="control">
+                        <input type="text" class="program" name="program" size="40"><br>
+                    </div>
+                </form>
+            </section>
+            <button type="button" id="addEducation">Add Education</button><br><br>
+            <section class="experience" data-index="1">
+                <form id="experienceForm">
+                    <label class="label">Experience</label>
+                    <label class="experienceEntries">Employer</label>
+                    <div class="control">
+                        <input type="text" class="employer" name="employer" size="40"><br>
+                    </div>
 
-                        <label class="experienceEntries">Job Title</label>
-                        <div class="control">
-                            <input type="text" class="jobTitle" name="jobTitle" size="40"><br>
-                        </div>
-                        <div class="field is-horizontal columns">
-                            <div class="column">
-                                <label class="experienceEntries">Start Date</label>
-                                <div class="control">
-                                    <input type="text" class="jobStart" name="jobStartDate" size="40">
-                                </div>
-                            </div>
-                            <div class="column">
-                                <label class="experienceEntries">End Date</label>
-                                <div class="control">
-                                    <input type="text" class="jobEnd" name="jobEndDate" size="40"><br>
-                                </div>
+                    <label class="experienceEntries">Job Title</label>
+                    <div class="control">
+                        <input type="text" class="jobTitle" name="jobTitle" size="40"><br>
+                    </div>
+                    <div class="field is-horizontal columns">
+                        <div class="column">
+                            <label class="experienceEntries">Start Date</label>
+                            <div class="control">
+                                <input type="text" class="jobStart" name="jobStartDate" size="40">
                             </div>
                         </div>
-                        
-
-                        <label class="experienceEntries">Description</label>
-                        <div class="control">
-                            <textarea type="text" class="textarea description" name="description" rows="5" cols="50" placeholder="List you major contributions and responsibilities"></textarea><br>
+                        <div class="column">
+                            <label class="experienceEntries">End Date</label>
+                            <div class="control">
+                                <input type="text" class="jobEnd" name="jobEndDate" size="40"><br>
+                            </div>
                         </div>
-                    </form>
-                    
-                </section>
-                <button type="button" id="addExperience">Add Experience</button><br><br>
-                <section class="project" data-index="1">
-                    <form id="projectForm">
-                        <label class="label">Projects</label>
-                        <label class="projectEntries">Project Title</label>
-                        <input type="text" class="project" id="project" name="projectTitle" size="40"><br><br>
+                    </div>
 
-                        <label>Project Description</label>
-                        <textarea type="text" class="textarea summary" name="projectDescription" rows="5" cols="50" placeholder="Describe what you accomplished in this project"></textarea><br>
-                    </form>
-                </section>
-                <button type="button" id="addProject">Add Another Project</button><br><br>
-                <section class="skills">
-                    <form id="skillsform">
-                        <label class="label">Skills</label>
-                        <textarea type="text" class="textarea" id="skills" name="skills" rows="5" cols="30" placeholder="List your relevant skills"></textarea>
-                    </form>
-                </section>
-                <section class="awards">
-                    <form id="awardsForm">
-                        <label class="label">Awards</label>
-                        <textarea type="text" class="textarea" id="awards" name="awards" rows="5" cols="30" placeholder="List your relevant awards"></textarea>
-                    </form>
-                </section>
-                
-                <div class="field is-grouped is-grouped-right">
-                    <p class="control">
-                    <a class="button is-primary" id="saveButton">
+
+                    <label class="experienceEntries">Description</label>
+                    <div class="control">
+                        <textarea type="text" class="textarea description" name="description" rows="5" cols="50"
+                            placeholder="List you major contributions and responsibilities"></textarea><br>
+                    </div>
+                </form>
+
+            </section>
+            <button type="button" id="addExperience">Add Experience</button><br><br>
+            <section class="project" data-index="1">
+                <form id="projectForm">
+                    <label class="label">Projects</label>
+                    <label class="projectEntries">Project Title</label>
+                    <input type="text" class="project" id="project" name="projectTitle" size="40"><br><br>
+
+                    <label>Project Description</label>
+                    <textarea type="text" class="textarea summary" name="projectDescription" rows="5" cols="50"
+                        placeholder="Describe what you accomplished in this project"></textarea><br>
+                </form>
+            </section>
+            <button type="button" id="addProject">Add Another Project</button><br><br>
+            <section class="skills">
+                <form id="skillsform">
+                    <label class="label">Skills</label>
+                    <textarea type="text" class="textarea" id="skills" name="skills" rows="5" cols="30"
+                        placeholder="List your relevant skills"></textarea>
+                </form>
+            </section>
+            <section class="awards">
+                <form id="awardsForm">
+                    <label class="label">Awards</label>
+                    <textarea type="text" class="textarea" id="awards" name="awards" rows="5" cols="30"
+                        placeholder="List your relevant awards"></textarea>
+                </form>
+            </section>
+
+            <div class="field is-grouped is-grouped-left pt-4">
+                <p class="control">
+                    <a class="button is-success is-light" id="saveButton">
                         Save Resume
                     </a>
-                    </p>
-                    <p class="control">
-                    <a class="button is-light" id="cancelButton">
+                </p>
+                <p class="control">
+                    <a class="button is-danger is-light" id="cancelButton">
                         Cancel
                     </a>
-                    </p>
-                </div>
-            </section>
-        </main>
-        
-       
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
