@@ -1,18 +1,17 @@
-$(document).ready(function(){
-
-    var specialElementHandler = {
-        '#editor': function(element, renderer){
-            return true;
-        }
-    };
-
-});
-$('#cmd').click(function(){
+$(document).ready(function () {
+  $(function () {
     var doc = new jsPDF();
-    doc.fromHTML($('#target').html(),15,15,{
-        "width":170,
-        "elementHandlers": specialElementHandlers
-
+    var specialElementHandlers = {
+      "#editor": function (element, renderer) {
+        return true;
+      },
+    };
+    $("#cmd").click(function () {
+      doc.fromHTML($("#content").html(), 15, 15, {
+        width: 170,
+        elementHandlers: specialElementHandlers,
+      });
+      doc.save("sample-file.pdf");
     });
-    doc.save('sample-resume.pdf');
+  });
 });
