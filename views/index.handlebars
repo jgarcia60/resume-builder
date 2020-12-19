@@ -2,80 +2,83 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>My Resumes</title>
+  <meta charset="utf-8">
+  <title>My Resumes</title>
 </head>
+
 <body>
-    <section class="hero is-info is-large">
-      <div class="hero-head">
-        <nav class="navbar">
-          <div class="container">
-            <div class="navbar-brand">
-              <a class="navbar-item">
-                <img src="https://png.pngtree.com/png-vector/20190725/ourlarge/pngtree-vector-resume-icon-png-image_1591180.jpg" alt="Logo">
-              </a>
-              <span class="navbar-burger" data-target="navbarMenuHeroB">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-            </div>
-            <div id="navbarMenuHeroB" class="navbar-menu">
-              <div class="navbar-end">
-                <a class="navbar-item is-active">
-                  Home
-                </a>
-                <a class="navbar-item" href="/newResume">
-                  New Resume
-                </a>
-                <a class="navbar-item" href="/logout">
-                  Log Out
-                </a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <p class="title">
-            Resume Builder
-          </p>
-          <p class="subtitle">
-            Welcome {{userName}}
-          </p>
-        </div>
-      </div>
-
-      <div class="hero-foot">
-        <nav class="tabs is-boxed is-fullwidth">
-          <div class="container">
-            <ul>
-              <li class="is-active">
-                <a>Resumes</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </section>
-    <section class="section">
+  <section class="hero is-info is-large">
+    <div class="hero-head">
+      <nav class="navbar">
         <div class="container">
-            <h1 class="title">{{userName}}</h1>
-            <div class="level-right">
-                <p class="level-item"><a class="button is-link is-light" href="/newResume">New Resume</a></p>
+          <div class="navbar-brand">
+            <a class="navbar-item">
+              <img
+                src="https://png.pngtree.com/png-vector/20190725/ourlarge/pngtree-vector-resume-icon-png-image_1591180.jpg"
+                alt="Logo">
+            </a>
+            <span class="navbar-burger" data-target="navbarMenuHeroB">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroB" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item is-active">
+                Home
+              </a>
+              <a class="navbar-item" href="/newResume">
+                New Resume
+              </a>
+              <a class="navbar-item" href="/logout">
+                Log Out
+              </a>
             </div>
+          </div>
         </div>
-    </section>
-    <div class="container">
-        <div class="tile is-ancestor resumeTile columns is-multiline">
-        </div>
+      </nav>
     </div>
+
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <p class="title">
+          Resume Builder
+        </p>
+        <p class="subtitle">
+          Welcome {{userName}}
+        </p>
+      </div>
+    </div>
+
+    <div class="hero-foot">
+      <nav class="tabs is-boxed is-fullwidth">
+        <div class="container">
+          <ul>
+            <li class="is-active">
+              <a>Resumes</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">{{userName}}</h1>
+      <div class="level-right">
+        <p class="level-item"><a class="button is-link is-light" href="/newResume">New Resume</a></p>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <div class="tile is-ancestor resumeTile columns is-multiline">
+    </div>
+  </div>
 </body>
 <script src="./js/index.js" type="text/javascript"></script>
 
-    <footer class="footer has-background-white-ter">
+<footer class="footer has-background-white-ter">
   <div class="content has-text-centered">
     <p>
       <strong>Resume Builder</strong> by Team Gold</a>. The source code is licensed
